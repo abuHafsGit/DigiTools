@@ -3,9 +3,9 @@ import { assets } from '../assets/assets';
 
 const Hero = () => {
     return (
-        <div className=' flex  justify-center items-center mt-4 gap-5'>
+        <div className=' flex  justify-center items-center mt-4 gap-5 w-[80%] mx-auto'>
             <div className=' space-y-4'>
-                <button className=' bg-[#E1E7FF] border border-blue-500 rounded-full p-1 flex gap-1 flex justify-center items-center text-[#4F39F6]'>
+                <button className=' bg-[#E1E7FF] border border-blue-500 rounded-full p-1  gap-1 flex justify-center items-center text-[#4F39F6]'>
                     <span class="relative flex size-3">
                         <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-sky-400 opacity-75"></span>
                         <span class="relative inline-flex size-3 rounded-full bg-indigo-500"></span>
@@ -18,7 +18,7 @@ const Hero = () => {
                     Explore Products</p>
                 <div className=' flex gap-2'>
                     <button className="btn  w-auto rounded-full bg-linear-to-r from-[#4F39F6] to-[#9514FA]">Explore Products</button>
-                    <button className="btn  w-auto rounded-full border border-[#4F39F6] text-[#4F39F6] hover:bg-[#4F39F6] hover:text-white">Watch Demo</button>
+                    <button className="btn  w-auto rounded-full border border-[#4F39F6] text-[#4F39F6]"><img src={assets.play} alt="" /> Watch Demo</button>
                 </div>
             </div>
             <div>
