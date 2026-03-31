@@ -2,12 +2,12 @@ import React from 'react';
 
 const TransparentCard = () => {
     return (
-        <div className=' space-y-5 lg:w-[80vw] mx-auto my-10 py-10'>
+        <div className=' space-y-5 lg:w-[80vw] mx-auto my-10 py-10  flex flex-col justify-center items-center'>
             <div className=' flex justify-center flex-col items-center text-center space-y-5'>
-                <h1 className=' text-5xl font-extrabold'>Simple, Transparent Pricing</h1>
+                <h1 className=' text-4xl md:text-5xl font-extrabold'>Simple, Transparent Pricing</h1>
                 <p>Choose the plan that fits your needs. Upgrade or downgrade anytime.</p>
             </div>
-            <div className=' grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
+            <div className=' grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-center items-center'>
                 <div className="card w-96 bg-base-100 shadow-sm">
                     <div className="card-body">
                         <div className="flex justify-between">

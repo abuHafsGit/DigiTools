@@ -3,10 +3,10 @@ import { assets } from '../assets/assets'
 
 function Step() {
     return (
-        <div className=' bg-[#F9FAFC] '>
+        <div className=' bg-[#F9FAFC] flex justify-center items-center flex-col'>
             <div className=' lg:w-[80vw] mx-auto my-5 py-15'>
                 <div className=' flex justify-center flex-col items-center text-center'>
-                    <h1 className=' text-5xl font-extrabold'>Get Started in 3 Steps</h1>
+                    <h1 className=' text-4xl md:text-5xl font-extrabold'>Get Started in 3 Steps</h1>
                     <p>Start using premium digital tools in minutes, not hours.</p>
                 </div>
                 <div className=' grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-5 gap-4'>

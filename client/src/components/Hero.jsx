@@ -6,7 +6,7 @@ const Hero = () => {
         <div className=' flex  justify-center items-center mt-4 gap-5 lg:w-[80%] mx-auto md:flex-row flex-col-reverse'>
             <div className=' space-y-4 p-4 '>
                 <button className=' bg-[#E1E7FF] border border-blue-500 rounded-full p-1  gap-1 flex justify-center items-center text-[#4F39F6]'>
-                    <span class="relative flex size-3">
+                    <span className="relative flex size-3">
                         <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-sky-400 opacity-75"></span>
                         <span className="relative inline-flex size-3 rounded-full bg-indigo-500"></span>
                     </span>
