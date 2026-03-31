@@ -1,13 +1,18 @@
+import { toast } from "react-toastify";
+import { ShoppingCart } from "lucide-react";
+
 const Cart = ({ carts, setCarts }) => {
     const totalPrice = carts.reduce((sum, item) => sum + item.price, 0);
 
     const handlePayment = () => {
         setCarts([]);
+        toast.success('Payment successful!')
     };
 
     const handleDelete = (item) => {
         const filteredArray = carts.filter((c) => c.id !== item.id);
         setCarts(filteredArray);
+        toast.success('Product removed from cart successfully!')
     };
 
     return (
@@ -15,7 +20,10 @@ const Cart = ({ carts, setCarts }) => {
             <h1 className="text-2xl font-bold">Your Cart</h1>
 
             {carts.length === 0 ? (
-                <p className="text-center text-2xl p-5">Cart is empty</p>
+                <div className=" flex flex-col border rounded-md justify-center items-center h-50">
+                    <ShoppingCart className=" w-16" />
+                    <p className="text-gray-500 mt-4 text-center p-2">Your cart is empty. Start adding products to your cart!</p>
+                </div>
             ) : (
                 <>
                     <div className="space-y-5 mt-4">
@@ -32,7 +40,7 @@ const Cart = ({ carts, setCarts }) => {
                                         />
                                         <div >
                                             <h2 className="text-xl font-bold">{item.name}</h2>
-                                            <div className="text-3xl font-bold">${item.price}/month</div>
+                                            <div className="text-base ">${item.price}/month</div>
                                         </div>
                                     </div>
                                 </div>
