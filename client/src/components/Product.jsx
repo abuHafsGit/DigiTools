@@ -1,4 +1,5 @@
 import React from 'react';
+import { toast } from 'react-toastify';
 
 const Product = ({ product, carts, setCarts }) => {
     const [isSubcribed, setIsSubcribed] = React.useState(false);
@@ -6,15 +7,16 @@ const Product = ({ product, carts, setCarts }) => {
     const handleSubscribe = () => {
         setIsSubcribed(true);
         setCarts([...carts, product]);
+        toast.success('Product added to cart successfully!')
     }
     console.log(isSubcribed);
     return (
         <div >
             <div className="card w-96 bg-base-100 shadow-sm">
 
-                <div className="card-body">
+                <div className="card-body hover:scale-105 duration-75">
                     <div className=' flex justify-between '>
-                        <img src={product.img} alt="" /> 
+                        <img src={product.img} alt="" />
                         <span className="badge badge-xs badge-warning">{product.tag}</span>
 
                     </div>
@@ -32,7 +34,9 @@ const Product = ({ product, carts, setCarts }) => {
                         </div>
 
                         <div className="mt-6">
-                            <button onClick={() => handleSubscribe()} className="btn btn-primary btn-block" >{isSubcribed ? 'Subscribed' : 'Subscribe'} </button>
+                            <button onClick={() => handleSubscribe()} className={`btn btn-primary btn-block ${isSubcribed ? 'bg-green-500' : ''}`} >
+                                {isSubcribed ? '✓ Add to Cart' : 'Buy Now'}
+                            </button>
                         </div>
                     </div>
                 </div>

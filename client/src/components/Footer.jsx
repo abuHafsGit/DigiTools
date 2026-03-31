@@ -3,7 +3,7 @@ import React from 'react';
 const Footer = () => {
     return (
         <div className=' bg-[#101727] text-white'>
-            <div className=' w-[80%] mx-auto'>
+            <div className=' lg:w-[80%] mx-auto'>
                 <footer className="footer sm:footer-horizontal  text-white  p-10 bg-[#101727]'">
                     <aside>
                         <p>DigiTools</p>

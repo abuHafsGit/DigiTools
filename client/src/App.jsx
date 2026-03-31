@@ -10,6 +10,7 @@ import Step from './components/Step';
 import WorkFlow from './components/WorkFlow';
 import TransparentCard from './components/TransparentCard';
 
+import { ToastContainer } from 'react-toastify';
 const fetchProducts = async () => {
     const response = await fetch('/data.json');
     return response.json();
@@ -40,6 +41,7 @@ const App = () => {
             <TransparentCard />
             <WorkFlow />
             <Footer />
+            <ToastContainer />
         </div>
 
     );
